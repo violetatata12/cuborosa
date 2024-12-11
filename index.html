@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Librería de A-Frame -->
+  <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+  <!-- Extensión de realidad aumentada -->
+  <script src="https://cdn.jsdelivr.net/gh/jeromeetienne/ar.js/aframe/build/aframe-ar.min.js"></script>
+</head>
+<body style="margin: 0; overflow: hidden;">
+  <a-scene embedded arjs>
+    <!-- Carga de recursos -->
+    <a-assets>
+      <a-asset-item id="modelo3d" src="modelo.glb"></a-asset-item>
+    </a-assets>
+    <!-- Entidad para el modelo -->
+    <a-entity gltf-model="#modelo3d" scale="0.1 0.1 0.1" position="0 0 0"></a-entity>
+    <a-camera-static></a-camera-static>
+  </a-scene>
+</body>
+</html>
